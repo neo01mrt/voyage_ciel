@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scable=no">
+    <title>Site de voyage anton</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #ebf1ff; 
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            background-image: url('img1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #49b4ab;
+        }
+
+        .navbar a.active {
+            color: #3aaaaa;
+        }
+
+        .explore-section {
+            background-color: #f7f7f7; 
+            padding: 2rem;
+            text-align: center;
+            margin-top: 5rem; 
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .explore-section .container {
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        .explore-section .container img {
+            margin-right: 2rem; 
+            margin-top: 4rem; 
+            border-radius: 10px; 
+            transition: transform 0.5s ease;
+        }    
+
+        .explore-section .container .text {
+            max-width: 70%; 
+        }
+
+        .explore-section .container img:hover {
+            transform: scale(1.1);
+        }
+
+        .explore-section h2 {
+            text-align: center;
+            margin-top: 2rem;
+            animation: fadeIn 1s ease-in-out 1s forwards;
+        }
+
+        .explore-section p {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out 1.5s forwards;
+        }
+
+        .explore-section button {
+            display: block;
+            margin: 0 auto;
+            padding: 0.5rem 2rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #3498db; 
+            color: #333;
+            font-size: 1.2rem;
+            cursor: pointer;
+            animation: fadeIn 1s ease-in-out 2s forwards;
+        }
+
+        .explore-section button:hover {
+            background-color: #30b4b4;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+     
+        strong {
+            color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out 3s forwards;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 2rem;
+            animation: fadeIn 1s ease-in-out 4s forwards;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-in-out 5s forwards;
+        }
+
+        li {
+            margin-bottom: 2rem;
+            width: 30%;
+            animation: slideIn 1s ease-in-out 6s forwards;
+        }
+
+        li img {
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out 7s forwards;
+        }
+
+        li h3 {
+            text-align: center;
+            margin-top: 1rem;
+            animation: fadeIn 1s ease-in-out 8s forwards;
+        }
+
+        li p {
+            text-align: center;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in-out 9s forwards;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out 10s forwards;
+        }
+
+        label {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out 11s forwards;
+        }
+
+        input, select {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+            width: 50%;
+            animation: fadeIn 1s ease-in-out 12s forwards;
+        }
+
+        input[type="submit"] {
+            padding: 0.5rem 2rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #3498db; 
+            color: #0c0b0b;
+            font-size: 1.2rem;
+            cursor: pointer;
+            animation: fadeIn 1s ease-in-out 13s forwards;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6bd1eb;
+        }
+
+        footer {
+            background-image: url('img3.webp'); 
+            background-size: cover;
+            background-position: center;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#destinations"><strong><big>Destinations</big></strong></a>
+            <h1><strong><big>Bienvenue</big></strong></h1>
+            <a href="#reservation"><strong><big>Réservation</big></strong></a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="explore-section">
+            <div class="container">
+                <img src="img3.webp" alt="Image à gauche" width="400" height="400">
+                <div class="text">
+                    <h1>Bienvenue à anton.fr</h1>
+                    <p>Venez réserver votre séjour sur anton.fr pour des vacance inoubliable !</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="destinations">
+            <h2>Destinations</h2>
+            <ul>
+                <li>
+                    <img src="img1.jpg" alt="Oahu" width=100% height=70% >
+                    <h3>Oahu</h3>
+                    <p>La plus grande île de l'archipel, célèbre pour ses plages de Waikiki et son histoire riche</p>
+                </li>
+                <li>
+                    <img src="img3.webp" alt="Maui" width=100% height=70% >
+                    <h3>Maui</h3>
+                    <p>Un archipel volcanique aux paysages inoubliables, entre plages de rêve et paradis privé</p>
+                </li>
+                <li>
+                    <img src="img2.jpg" alt="Île Big Island" width=100% height=70% >
+                    <h3>Île Big Island</h3>
+                    <p>La plus grande île de Hawaï, riche en découvertes et en aventures</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="reservation">
+            <h2>Réserver un séjour</h2>
+            <form action="/reservation" method="post">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="checkin">Départ le :</label>
+                <input type="date" id="checkin" name="Départ le :" required>
+                <label for="checkout">Fin le :</label>
+                <input type="date" id="checkout" name="Fin le :" required>
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="oahu">Oahu</option>
+                    <option value="maui">Maui</option>
+                    <option value="big-island">Île Big Island</option>
+                </select>
+                <input type="submit" value="Réserver">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Site de voyage Anton.fr</p>
+    </footer>
+</body>
+</html>
